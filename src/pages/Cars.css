@@ -1,0 +1,141 @@
+.cars-page {
+  min-height: 100vh;
+  padding-top: 70px;
+  padding-bottom: 3rem;
+  background-color: var(--background);
+  position: relative;
+}
+
+.cars-header {
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  padding: 0 1.5rem;
+}
+
+.cars-header h1 {
+  font-size: 2.5rem;
+  color: var(--white);
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.header-underline {
+  width: 80px;
+  height: 4px;
+  background-color: var(--secondary-gold);
+  margin-top: 0.5rem;
+  border-radius: 2px;
+}
+
+.cars-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.no-cars {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 3rem;
+  background-color: var(--card-bg);
+  border: 1px dashed var(--border-color);
+  border-radius: 8px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+}
+
+/* Floating Action Button */
+.fab-add-car {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--secondary-gold);
+  color: var(--primary-black);
+  font-size: 2rem;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.4);
+  transition: all 0.3s ease;
+  z-index: 100;
+  line-height: 1;
+}
+
+.fab-add-car:hover {
+  background-color: #ffed4e;
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(255, 215, 0, 0.6);
+}
+
+.fab-add-car:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 1024px) {
+  .cars-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cars-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .cars-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .cars-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .fab-add-car {
+    width: 56px;
+    height: 56px;
+    font-size: 1.8rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cars-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .cars-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .cars-grid {
+    gap: 1rem;
+  }
+
+  .fab-add-car {
+    width: 52px;
+    height: 52px;
+    font-size: 1.5rem;
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .no-cars {
+    padding: 2rem 1rem;
+    font-size: 1rem;
+  }
+}
